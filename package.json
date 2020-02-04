@@ -1,0 +1,20 @@
+{
+  "name": "address",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify main.js -o bundle.js -s helper",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bitcore-lib": "^8.14.4",
+    "bitcore-lib-cash": "^8.14.4",
+    "browserify": "^16.5.0",
+    "bsv": "^1.2.0",
+    "litecore-lib": "^0.13.22"
+  }
+}

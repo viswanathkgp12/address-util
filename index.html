@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>BTC address utility</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <script
+      defer
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    ></script>
+    <style>
+      .set_button {
+        border: 1px solid gray;
+        padding: 5px 50px 5px 50px;
+        background: #035224;
+        color: white;
+        border-radius: 5px;
+      }
+      .set_button:hover {
+        border: 1px solid black;
+        padding: 6px 50px 6px 50px;
+        background: white;
+        color: black;
+      }
+      .form-control {
+        width: 18%;
+      }
+      .form-group {
+        display: -webkit-box;
+      }
+      .addresses {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="text-align:center;">
+      <h1>Bitcoin & AltCoin address utility</h1>
+    </div>
+    <div class="container">
+      <ul class="nav nav-tabs" role="tablist">
+        <li id="address-generator-tab">
+          <a href="#address-generator" role="tab" data-toggle="tab"
+            >Address Generator</a
+          >
+        </li>
+        <li id="address-validator-tab" class="active">
+          <a
+            href="#address-validator"
+            class="focus"
+            role="tab"
+            data-toggle="tab"
+            >Address Validator</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane" id="address-generator">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="form-inline">
+                  <br />
+                  <br />
+                  <label
+                    >Generate new
+                    <select id="coin-selection" class="form-control">
+                      <option value="btc">BTC</option>
+                      <option value="bsv">BSV</option>
+                      <option value="bch" selected="">BCH</option>
+                      <option value="ltc">LTC</option>
+                    </select>
+                    &nbsp address for
+                    <select id="network-selection" class="form-control">
+                      <option value="livenet">livenet</option>
+                      <option value="testnet">testnet</option>
+                      <option value="regtest" selected="">regtest</option>
+                    </select>
+                    &nbsp network</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <button class="set_button" onclick="generateAddress()">
+                  Generate
+                </button>
+              </div>
+            </div>
+            <div>
+              <table class="table table-striped addresses">
+                <thead>
+                  <tr>
+                    <th class="col-sm-3">
+                      <div class="input-group">
+                        <span>Type</span>&nbsp;&nbsp;
+                      </div>
+                    </th>
+                    <th class="col-sm-9">
+                      <div class="input-group">
+                        <span>Address</span>&nbsp;&nbsp;
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="addresses monospace">
+                  <tr>
+                    <td class="col-sm-3">&nbsp;</td>
+                    <td class="col-sm-9">&nbsp;</td>
+                    >
+                  </tr>
+                  <tr>
+                    <td class="col-sm-3">&nbsp;</td>
+                    <td class="col-sm-9">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="col-sm-3">&nbsp;</td>
+                    <td class="col-sm-9">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="col-sm-3">&nbsp;</td>
+                    <td class="col-sm-9">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-sm-12">
+              <div class="well">
+                <h2>Instructions on how to use this tool</h2>
+                <p>
+                  You can generate a new address here. Select a coin type and
+                  the network. Click generate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane active" id="address-validator">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="form-inline">
+                  <br />
+                  <br />
+                  <label
+                    >Copy paste the &nbsp
+                    <select id="coin-selection" class="form-control">
+                      <option value="btc">BTC</option>
+                      <option value="bsv">BSV</option>
+                      <option value="bch" selected="">BCH</option>
+                      <option value="ltc">LTC</option> </select
+                    >&nbsp address to be validated on
+                    <select id="network-selection" class="form-control">
+                      <option value="livenet">livenet</option>
+                      <option value="testnet">testnet</option>
+                      <option value="regtest" selected="">regtest</option>
+                    </select>
+                    &nbsp network</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  id="address"
+                  placeholder="Enter the address to be validated"
+                  name="address"
+                  value=""
+                  type="text"
+                  style="width: 300px; text-align: center;"
+                />
+                <button class="set_button" onclick="validateAddress()">
+                  Validate
+                </button>
+              </div>
+              <div style="font-weight: bold">
+                <p
+                  class="text-danger validation-result"
+                  id="validation-progress"
+                  style="display: none"
+                ></p>
+                <p
+                  class="text-danger validation-result"
+                  id="invalid-address"
+                  style="display: none"
+                ></p>
+                <p
+                  class="text-success validation-result"
+                  id="valid-address"
+                  style="display: none"
+                ></p>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="well">
+                <h2>Instructions on how to use this tool</h2>
+                <p>
+                  Make sure you copy paste addresses in proper format. The tool
+                  might not work if address is all lower-cased or all
+                  upper-cased.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="bundle.js"></script>
+  <script>
+    const addressTypeMapping = {
+      p2pkh: "Pay To Public Key Hash",
+      p2sh: "Pay To Script Hash (Multisig Address)"
+    };
+    function generateAddress() {
+      const coin = $("#coin-selection").val();
+      const network = $("#network-selection").val();
+      const addressObjects = helper.addressGenerator(coin, network);
+      let tbody = "";
+      for (const each of addressObjects) {
+        for (const address of each.values) {
+          tbody += `<tr><td class="col-sm-3">${
+            addressTypeMapping[each.type]
+          }</td><td class="col-sm-9">${address}</td></tr>`;
+        }
+      }
+      $("tbody.addresses").html(tbody);
+      $(".addresses").show();
+    }
+
+    function validateAddress() {
+      $("#valid-address").hide();
+      $("#invalid-address").hide();
+
+      $("#validation-progress").html(
+        "Validating said address....Please wait..."
+      );
+      $("#validation-progress").show();
+      setTimeout(() => {
+        displayValidationResult();
+      }, 100);
+    }
+
+    function displayValidationResult() {
+      $("#validation-progress").hide();
+      const address = $("#address").val();
+      const coin = $("#coin-selection").val();
+      const network = $("#network-selection").val();
+      const isValid = helper.validateAddress(address, coin, network);
+      if (isValid) {
+        $("#valid-address")
+          .html(`This ${coin} address is valid. Note that the tool can only
+                  check if the address is correctly typed. It cannot check if
+                  the receiver actually owns a private key for this address.`);
+        $("#valid-address").show();
+      } else {
+        $("#invalid-address").html(`This ${coin} address is invalid.`);
+        $("#invalid-address").show();
+      }
+    }
+  </script>
+</html>
