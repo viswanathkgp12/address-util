@@ -69,6 +69,10 @@ function chooseModule(coin) {
 }
 
 function validateAddress(address, coin, network) {
+  // Special Case
+  if (coin === "bsv" && network === "regtest") {
+    network = "testnet";
+  }
   const bitcore = chooseModule(coin);
   return bitcore.Address.isValid(address, network);
 }
@@ -20174,7 +20178,13 @@ utils.intFromLE = intFromLE;
 
 },{"bn.js":154,"minimalistic-assert":386,"minimalistic-crypto-utils":387}],85:[function(require,module,exports){
 module.exports={
-  "_from": "elliptic@=6.4.0",
+  "_args": [
+    [
+      "elliptic@6.4.0",
+      "/Users/viswanath.kapavarapu/Work/address-util"
+    ]
+  ],
+  "_from": "elliptic@6.4.0",
   "_id": "elliptic@6.4.0",
   "_inBundle": false,
   "_integrity": "sha1-ysmvh2LIWDYYcAPI3+GT5eLq5d8=",
@@ -20183,20 +20193,19 @@ module.exports={
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "elliptic@=6.4.0",
+    "raw": "elliptic@6.4.0",
     "name": "elliptic",
     "escapedName": "elliptic",
-    "rawSpec": "=6.4.0",
+    "rawSpec": "6.4.0",
     "saveSpec": null,
-    "fetchSpec": "=6.4.0"
+    "fetchSpec": "6.4.0"
   },
   "_requiredBy": [
     "/bitcore-lib-cash"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
-  "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
-  "_spec": "elliptic@=6.4.0",
-  "_where": "/home/v/Desktop/address/node_modules/bitcore-lib-cash",
+  "_spec": "6.4.0",
+  "_where": "/Users/viswanath.kapavarapu/Work/address-util",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -20204,7 +20213,6 @@ module.exports={
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "bn.js": "^4.4.0",
     "brorand": "^1.0.1",
@@ -20214,7 +20222,6 @@ module.exports={
     "minimalistic-assert": "^1.0.0",
     "minimalistic-crypto-utils": "^1.0.0"
   },
-  "deprecated": false,
   "description": "EC cryptography",
   "devDependencies": {
     "brfs": "^1.4.3",
@@ -20264,7 +20271,13 @@ module.exports={
 arguments[4][17][0].apply(exports,arguments)
 },{"dup":17}],87:[function(require,module,exports){
 module.exports={
-  "_from": "bitcore-lib-cash",
+  "_args": [
+    [
+      "bitcore-lib-cash@8.14.4",
+      "/Users/viswanath.kapavarapu/Work/address-util"
+    ]
+  ],
+  "_from": "bitcore-lib-cash@8.14.4",
   "_id": "bitcore-lib-cash@8.14.4",
   "_inBundle": false,
   "_integrity": "sha512-76pGRxgop1zQop1oMmb/IM/EzRwtp9X4AdLwaPWU3LL0JhTXQssKQY6BZ6bDN7pySVs4gMN/gUQoPITwltdYLA==",
@@ -20278,23 +20291,21 @@ module.exports={
     "minimalistic-crypto-utils": "1.0.1"
   },
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "bitcore-lib-cash",
+    "raw": "bitcore-lib-cash@8.14.4",
     "name": "bitcore-lib-cash",
     "escapedName": "bitcore-lib-cash",
-    "rawSpec": "",
+    "rawSpec": "8.14.4",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "8.14.4"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/bitcore-lib-cash/-/bitcore-lib-cash-8.14.4.tgz",
-  "_shasum": "35595d4355b64eeb0839648656b42c24d58d8c5c",
-  "_spec": "bitcore-lib-cash",
-  "_where": "/home/v/Desktop/address",
+  "_spec": "8.14.4",
+  "_where": "/Users/viswanath.kapavarapu/Work/address-util",
   "author": {
     "name": "BitPay",
     "email": "dev@bitpay.com"
@@ -20302,7 +20313,6 @@ module.exports={
   "browser": {
     "request": "browser-request"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "bitcore-lib": "^8.14.4",
     "bn.js": "=4.11.8",
@@ -20312,7 +20322,6 @@ module.exports={
     "inherits": "=2.0.1",
     "lodash": "=4.17.15"
   },
-  "deprecated": false,
   "description": "A pure and powerful JavaScript Bitcoin Cash library.",
   "devDependencies": {
     "base-x": "=3.0.4",
@@ -29672,7 +29681,13 @@ arguments[4][83][0].apply(exports,arguments)
 arguments[4][84][0].apply(exports,arguments)
 },{"bn.js":154,"dup":84,"minimalistic-assert":386,"minimalistic-crypto-utils":387}],151:[function(require,module,exports){
 module.exports={
-  "_from": "elliptic@=6.4.0",
+  "_args": [
+    [
+      "elliptic@6.4.0",
+      "/Users/viswanath.kapavarapu/Work/address-util"
+    ]
+  ],
+  "_from": "elliptic@6.4.0",
   "_id": "elliptic@6.4.0",
   "_inBundle": false,
   "_integrity": "sha1-ysmvh2LIWDYYcAPI3+GT5eLq5d8=",
@@ -29681,20 +29696,19 @@ module.exports={
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "elliptic@=6.4.0",
+    "raw": "elliptic@6.4.0",
     "name": "elliptic",
     "escapedName": "elliptic",
-    "rawSpec": "=6.4.0",
+    "rawSpec": "6.4.0",
     "saveSpec": null,
-    "fetchSpec": "=6.4.0"
+    "fetchSpec": "6.4.0"
   },
   "_requiredBy": [
     "/bitcore-lib"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
-  "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
-  "_spec": "elliptic@=6.4.0",
-  "_where": "/home/v/Desktop/address/node_modules/bitcore-lib",
+  "_spec": "6.4.0",
+  "_where": "/Users/viswanath.kapavarapu/Work/address-util",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -29702,7 +29716,6 @@ module.exports={
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "bn.js": "^4.4.0",
     "brorand": "^1.0.1",
@@ -29712,7 +29725,6 @@ module.exports={
     "minimalistic-assert": "^1.0.0",
     "minimalistic-crypto-utils": "^1.0.0"
   },
-  "deprecated": false,
   "description": "EC cryptography",
   "devDependencies": {
     "brfs": "^1.4.3",
@@ -29762,7 +29774,13 @@ module.exports={
 arguments[4][17][0].apply(exports,arguments)
 },{"dup":17}],153:[function(require,module,exports){
 module.exports={
-  "_from": "bitcore-lib",
+  "_args": [
+    [
+      "bitcore-lib@8.14.4",
+      "/Users/viswanath.kapavarapu/Work/address-util"
+    ]
+  ],
+  "_from": "bitcore-lib@8.14.4",
   "_id": "bitcore-lib@8.14.4",
   "_inBundle": false,
   "_integrity": "sha512-YkIGObg2CvZ+kIbVtNkLnzMW5PEPPzm+fwjrdzSRwhU5YeuY3VjT+V1ldksGusM7wz5kywFL9KASsiB6NDFj7A==",
@@ -29776,24 +29794,22 @@ module.exports={
     "minimalistic-crypto-utils": "1.0.1"
   },
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "bitcore-lib",
+    "raw": "bitcore-lib@8.14.4",
     "name": "bitcore-lib",
     "escapedName": "bitcore-lib",
-    "rawSpec": "",
+    "rawSpec": "8.14.4",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "8.14.4"
   },
   "_requiredBy": [
-    "#USER",
     "/",
     "/bitcore-lib-cash"
   ],
   "_resolved": "https://registry.npmjs.org/bitcore-lib/-/bitcore-lib-8.14.4.tgz",
-  "_shasum": "61803c446a78f83d4733e55d08a938555cd17ce6",
-  "_spec": "bitcore-lib",
-  "_where": "/home/v/Desktop/address",
+  "_spec": "8.14.4",
+  "_where": "/Users/viswanath.kapavarapu/Work/address-util",
   "author": {
     "name": "BitPay",
     "email": "dev@bitpay.com"
@@ -29801,7 +29817,6 @@ module.exports={
   "browser": {
     "request": "browser-request"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "bech32": "=1.1.3",
     "bn.js": "=4.11.8",
@@ -29811,7 +29826,6 @@ module.exports={
     "inherits": "=2.0.1",
     "lodash": "=4.17.15"
   },
-  "deprecated": false,
   "description": "A pure and powerful JavaScript Bitcoin library.",
   "devDependencies": {
     "bitcore-build": "^8.14.4",
@@ -48982,6 +48996,12 @@ arguments[4][83][0].apply(exports,arguments)
 arguments[4][84][0].apply(exports,arguments)
 },{"bn.js":154,"dup":84,"minimalistic-assert":386,"minimalistic-crypto-utils":387}],245:[function(require,module,exports){
 module.exports={
+  "_args": [
+    [
+      "elliptic@6.4.1",
+      "/Users/viswanath.kapavarapu/Work/address-util"
+    ]
+  ],
   "_from": "elliptic@6.4.1",
   "_id": "elliptic@6.4.1",
   "_inBundle": false,
@@ -49002,9 +49022,8 @@ module.exports={
     "/bsv"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.1.tgz",
-  "_shasum": "c2d0b7776911b86722c632c3c06c60f2f819939a",
-  "_spec": "elliptic@6.4.1",
-  "_where": "/home/v/Desktop/address/node_modules/bsv",
+  "_spec": "6.4.1",
+  "_where": "/Users/viswanath.kapavarapu/Work/address-util",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -49012,7 +49031,6 @@ module.exports={
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "bn.js": "^4.4.0",
     "brorand": "^1.0.1",
@@ -49022,7 +49040,6 @@ module.exports={
     "minimalistic-assert": "^1.0.0",
     "minimalistic-crypto-utils": "^1.0.0"
   },
-  "deprecated": false,
   "description": "EC cryptography",
   "devDependencies": {
     "brfs": "^1.4.3",
@@ -49072,7 +49089,13 @@ module.exports={
 arguments[4][17][0].apply(exports,arguments)
 },{"dup":17}],247:[function(require,module,exports){
 module.exports={
-  "_from": "bsv",
+  "_args": [
+    [
+      "bsv@1.2.0",
+      "/Users/viswanath.kapavarapu/Work/address-util"
+    ]
+  ],
+  "_from": "bsv@1.2.0",
   "_id": "bsv@1.2.0",
   "_inBundle": false,
   "_integrity": "sha512-Hccrppea561dus7v/5OZsSWClsPYLFd+kQjdRRkR5Ky+fuwlJYtMdJWGR7nuLUKqWyZwkBI5lLocXERvZ/zSkg==",
@@ -49086,23 +49109,21 @@ module.exports={
     "minimalistic-crypto-utils": "1.0.1"
   },
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "bsv",
+    "raw": "bsv@1.2.0",
     "name": "bsv",
     "escapedName": "bsv",
-    "rawSpec": "",
+    "rawSpec": "1.2.0",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "1.2.0"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/bsv/-/bsv-1.2.0.tgz",
-  "_shasum": "555598c37411e5af94ebc6ad4f16adfcb9ebb1ef",
-  "_spec": "bsv",
-  "_where": "/home/v/Desktop/address",
+  "_spec": "1.2.0",
+  "_where": "/Users/viswanath.kapavarapu/Work/address-util",
   "author": {
     "name": "Ryan X. Charles",
     "email": "ryan@moneybutton.com"
@@ -49113,7 +49134,6 @@ module.exports={
   "bugs": {
     "url": "https://github.com/moneybutton/bsv/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "aes-js": "^3.1.2",
     "bn.js": "=4.11.8",
@@ -49124,7 +49144,6 @@ module.exports={
     "inherits": "2.0.3",
     "unorm": "1.4.1"
   },
-  "deprecated": false,
   "description": "A pure and powerful JavaScript Bitcoin SV (BSV) library.",
   "devDependencies": {
     "brfs": "2.0.1",
@@ -55752,30 +55771,35 @@ utils.intFromLE = intFromLE;
 
 },{"bn.js":154,"minimalistic-assert":386,"minimalistic-crypto-utils":387}],285:[function(require,module,exports){
 module.exports={
-  "_from": "elliptic@^6.0.0",
+  "_args": [
+    [
+      "elliptic@6.5.2",
+      "/Users/viswanath.kapavarapu/Work/address-util"
+    ]
+  ],
+  "_from": "elliptic@6.5.2",
   "_id": "elliptic@6.5.2",
   "_inBundle": false,
   "_integrity": "sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==",
   "_location": "/elliptic",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "elliptic@^6.0.0",
+    "raw": "elliptic@6.5.2",
     "name": "elliptic",
     "escapedName": "elliptic",
-    "rawSpec": "^6.0.0",
+    "rawSpec": "6.5.2",
     "saveSpec": null,
-    "fetchSpec": "^6.0.0"
+    "fetchSpec": "6.5.2"
   },
   "_requiredBy": [
     "/browserify-sign",
     "/create-ecdh"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.5.2.tgz",
-  "_shasum": "05c5678d7173c049d8ca433552224a495d0e3762",
-  "_spec": "elliptic@^6.0.0",
-  "_where": "/home/v/Desktop/address/node_modules/browserify-sign",
+  "_spec": "6.5.2",
+  "_where": "/Users/viswanath.kapavarapu/Work/address-util",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -55783,7 +55807,6 @@ module.exports={
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "bn.js": "^4.4.0",
     "brorand": "^1.0.1",
@@ -55793,7 +55816,6 @@ module.exports={
     "minimalistic-assert": "^1.0.0",
     "minimalistic-crypto-utils": "^1.0.0"
   },
-  "deprecated": false,
   "description": "EC cryptography",
   "devDependencies": {
     "brfs": "^1.4.3",
@@ -75773,7 +75795,13 @@ exports.shr64_lo = shr64_lo;
 
 },{"inherits":379}],378:[function(require,module,exports){
 module.exports={
-  "_from": "elliptic@=3.0.3",
+  "_args": [
+    [
+      "elliptic@3.0.3",
+      "/Users/viswanath.kapavarapu/Work/address-util"
+    ]
+  ],
+  "_from": "elliptic@3.0.3",
   "_id": "elliptic@3.0.3",
   "_inBundle": false,
   "_integrity": "sha1-hlybQgv75VAGuflp+XoNLESWZZU=",
@@ -75795,9 +75823,8 @@ module.exports={
     "/litecore-lib"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
-  "_shasum": "865c9b420bfbe55006b9f969f97a0d2c44966595",
-  "_spec": "elliptic@3.0.3",
-  "_where": "/home/v/Desktop/address/node_modules/litecore-lib",
+  "_spec": "3.0.3",
+  "_where": "/Users/viswanath.kapavarapu/Work/address-util",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -75805,14 +75832,12 @@ module.exports={
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "bn.js": "^2.0.0",
     "brorand": "^1.0.1",
     "hash.js": "^1.0.0",
     "inherits": "^2.0.1"
   },
-  "deprecated": false,
   "description": "EC cryptography",
   "devDependencies": {
     "browserify": "^3.44.2",
@@ -88384,83 +88409,34 @@ module.exports = scrypt
 }).call(this,require("buffer").Buffer)
 },{"buffer":250,"crypto":259}],382:[function(require,module,exports){
 module.exports={
-  "_from": "litecore-lib",
+  "_args": [
+    [
+      "litecore-lib@0.13.22",
+      "/Users/viswanath.kapavarapu/Work/address-util"
+    ]
+  ],
+  "_from": "litecore-lib@0.13.22",
   "_id": "litecore-lib@0.13.22",
   "_inBundle": false,
   "_integrity": "sha1-fXQGvmdYLuX98qwABOpq0dHQ0/A=",
   "_location": "/litecore-lib",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "litecore-lib",
+    "raw": "litecore-lib@0.13.22",
     "name": "litecore-lib",
     "escapedName": "litecore-lib",
-    "rawSpec": "",
+    "rawSpec": "0.13.22",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "0.13.22"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/litecore-lib/-/litecore-lib-0.13.22.tgz",
-  "_shasum": "7d7406be67582ee5fdf2ac0004ea6ad1d1d0d3f0",
-  "_shrinkwrap": {
-    "name": "litecore-lib",
-    "version": "0.13.21",
-    "dependencies": {
-      "bn.js": {
-        "version": "2.0.4",
-        "from": "bn.js@=2.0.4",
-        "resolved": "https://registry.npmjs.org/bn.js/-/bn.js-2.0.4.tgz"
-      },
-      "bs58": {
-        "version": "2.0.0",
-        "from": "bs58@=2.0.0",
-        "resolved": "https://registry.npmjs.org/bs58/-/bs58-2.0.0.tgz"
-      },
-      "buffer-compare": {
-        "version": "1.0.0",
-        "from": "buffer-compare@=1.0.0",
-        "resolved": "https://registry.npmjs.org/buffer-compare/-/buffer-compare-1.0.0.tgz"
-      },
-      "elliptic": {
-        "version": "3.0.3",
-        "from": "elliptic@=3.0.3",
-        "resolved": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
-        "dependencies": {
-          "brorand": {
-            "version": "1.0.5",
-            "from": "brorand@^1.0.1",
-            "resolved": "https://registry.npmjs.org/brorand/-/brorand-1.0.5.tgz"
-          },
-          "hash.js": {
-            "version": "1.0.3",
-            "from": "hash.js@=1.0.3",
-            "resolved": "https://registry.npmjs.org/hash.js/-/hash.js-1.0.3.tgz"
-          }
-        }
-      },
-      "inherits": {
-        "version": "2.0.1",
-        "from": "inherits@=2.0.1",
-        "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
-      },
-      "lodash": {
-        "version": "3.10.1",
-        "from": "lodash@=3.10.1",
-        "resolved": "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz"
-      },
-      "scryptsy": {
-        "version": "2.0.0",
-        "from": "scryptsy@2.0.0",
-        "resolved": "https://registry.npmjs.org/scryptsy/-/scryptsy-2.0.0.tgz"
-      }
-    }
-  },
-  "_spec": "litecore-lib",
-  "_where": "/home/v/Desktop/address",
+  "_spec": "0.13.22",
+  "_where": "/Users/viswanath.kapavarapu/Work/address-util",
   "author": {
     "name": "BitPay",
     "email": "dev@bitpay.com"
@@ -88471,7 +88447,6 @@ module.exports={
   "bugs": {
     "url": "https://github.com/litecoin-project/litecore-lib/issues"
   },
-  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Charlie Lee",
@@ -88531,7 +88506,6 @@ module.exports={
     "lodash": "=3.10.1",
     "scryptsy": "=2.0.0"
   },
-  "deprecated": false,
   "description": "A pure and powerful JavaScript Litecoin library.",
   "devDependencies": {
     "brfs": "^1.2.0",

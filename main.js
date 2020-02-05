@@ -68,6 +68,10 @@ function chooseModule(coin) {
 }
 
 function validateAddress(address, coin, network) {
+  // Special Case
+  if (coin === "bsv" && network === "regtest") {
+    network = "testnet";
+  }
   const bitcore = chooseModule(coin);
   return bitcore.Address.isValid(address, network);
 }
