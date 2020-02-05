@@ -217,7 +217,9 @@
   <script>
     const addressTypeMapping = {
       p2pkh: "Pay To Public Key Hash",
-      p2sh: "Pay To Script Hash (Multisig Address)"
+      p2sh: "Pay To Script Hash (Multisig Address)",
+      p2wpkh: "Pay To Witness Public Key Hash",
+      p2wsh: "Pay To Witness Script Hash(Multisig Address)"
     };
     function generateAddress() {
       const coin = $("#coin-selection").val();
